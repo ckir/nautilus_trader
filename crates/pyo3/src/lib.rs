@@ -215,6 +215,13 @@ fn _libnautilus(py: Python<'_>, m: &Bound<'_, PyModule>) -> PyResult<()> {
     // Adapters
     ////////////////////////////////////////////////////////////////////////////////
 
+    let n = "alpaca";
+    let submodule = pyo3::wrap_pymodule!(nautilus_alpaca::python::alpaca);
+    m.add_wrapped(submodule)?;
+    sys_modules.set_item(format!("{module_name}.{n}"), m.getattr(n)?)?;
+    #[cfg(feature = "cython-compat")]
+    re_export_module_attributes(m, n)?;
+
     let n = "architect";
     let submodule = pyo3::wrap_pymodule!(nautilus_architect_ax::python::architect);
     m.add_wrapped(submodule)?;
@@ -288,6 +295,13 @@ fn _libnautilus(py: Python<'_>, m: &Bound<'_, PyModule>) -> PyResult<()> {
     #[cfg(feature = "cython-compat")]
     re_export_module_attributes(m, n)?;
 
+    let n = "finnhub";
+    let submodule = pyo3::wrap_pymodule!(nautilus_finnhub::python::finnhub);
+    m.add_wrapped(submodule)?;
+    sys_modules.set_item(format!("{module_name}.{n}"), m.getattr(n)?)?;
+    #[cfg(feature = "cython-compat")]
+    re_export_module_attributes(m, n)?;
+
     let n = "hyperliquid";
     let submodule = pyo3::wrap_pymodule!(nautilus_hyperliquid::python::hyperliquid);
     m.add_wrapped(submodule)?;
@@ -304,6 +318,13 @@ fn _libnautilus(py: Python<'_>, m: &Bound<'_, PyModule>) -> PyResult<()> {
 
     let n = "lighter";
     let submodule = pyo3::wrap_pymodule!(nautilus_lighter::python::lighter);
+    m.add_wrapped(submodule)?;
+    sys_modules.set_item(format!("{module_name}.{n}"), m.getattr(n)?)?;
+    #[cfg(feature = "cython-compat")]
+    re_export_module_attributes(m, n)?;
+
+    let n = "massive";
+    let submodule = pyo3::wrap_pymodule!(nautilus_massive::python::massive);
     m.add_wrapped(submodule)?;
     sys_modules.set_item(format!("{module_name}.{n}"), m.getattr(n)?)?;
     #[cfg(feature = "cython-compat")]
@@ -339,6 +360,13 @@ fn _libnautilus(py: Python<'_>, m: &Bound<'_, PyModule>) -> PyResult<()> {
 
     let n = "tardis";
     let submodule = pyo3::wrap_pymodule!(nautilus_tardis::python::tardis);
+    m.add_wrapped(submodule)?;
+    sys_modules.set_item(format!("{module_name}.{n}"), m.getattr(n)?)?;
+    #[cfg(feature = "cython-compat")]
+    re_export_module_attributes(m, n)?;
+
+    let n = "yahoo";
+    let submodule = pyo3::wrap_pymodule!(nautilus_yahoo::python::yahoo);
     m.add_wrapped(submodule)?;
     sys_modules.set_item(format!("{module_name}.{n}"), m.getattr(n)?)?;
     #[cfg(feature = "cython-compat")]

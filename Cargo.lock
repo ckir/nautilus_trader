@@ -5477,12 +5477,22 @@ version = "0.1.0"
 dependencies = [
  "anyhow",
  "async-trait",
+ "chrono",
+ "futures-util",
+ "log",
  "nautilus-common",
  "nautilus-core",
  "nautilus-finstream",
  "nautilus-model",
+ "nautilus-system",
+ "pyo3",
+ "pyo3-stub-gen",
+ "reqwest 0.13.4",
  "serde",
+ "serde_json",
  "tokio",
+ "tokio-tungstenite",
+ "tokio-util",
  "tracing",
 ]
 
@@ -6232,6 +6242,30 @@ dependencies = [
 ]
 
 [[package]]
+name = "nautilus-finnhub"
+version = "0.1.0"
+dependencies = [
+ "anyhow",
+ "async-trait",
+ "chrono",
+ "futures-util",
+ "log",
+ "nautilus-common",
+ "nautilus-core",
+ "nautilus-finstream",
+ "nautilus-model",
+ "nautilus-system",
+ "pyo3",
+ "pyo3-stub-gen",
+ "serde",
+ "serde_json",
+ "tokio",
+ "tokio-tungstenite",
+ "tokio-util",
+ "tracing",
+]
+
+[[package]]
 name = "nautilus-finstream"
 version = "0.58.0"
 dependencies = [
@@ -6541,6 +6575,30 @@ dependencies = [
 ]
 
 [[package]]
+name = "nautilus-massive"
+version = "0.1.0"
+dependencies = [
+ "anyhow",
+ "async-trait",
+ "chrono",
+ "futures-util",
+ "log",
+ "nautilus-common",
+ "nautilus-core",
+ "nautilus-finstream",
+ "nautilus-model",
+ "nautilus-system",
+ "pyo3",
+ "pyo3-stub-gen",
+ "serde",
+ "serde_json",
+ "tokio",
+ "tokio-tungstenite",
+ "tokio-util",
+ "tracing",
+]
+
+[[package]]
 name = "nautilus-model"
 version = "0.58.0"
 dependencies = [
@@ -6810,6 +6868,7 @@ dependencies = [
 name = "nautilus-pyo3"
 version = "0.58.0"
 dependencies = [
+ "nautilus-alpaca",
  "nautilus-analysis",
  "nautilus-architect-ax",
  "nautilus-backtest",
@@ -6828,6 +6887,7 @@ dependencies = [
  "nautilus-derive",
  "nautilus-dydx",
  "nautilus-execution",
+ "nautilus-finnhub",
  "nautilus-hyperliquid",
  "nautilus-indicators",
  "nautilus-infrastructure",
@@ -6835,6 +6895,7 @@ dependencies = [
  "nautilus-kraken",
  "nautilus-lighter",
  "nautilus-live",
+ "nautilus-massive",
  "nautilus-model",
  "nautilus-network",
  "nautilus-okx",
@@ -6847,6 +6908,7 @@ dependencies = [
  "nautilus-tardis",
  "nautilus-testkit",
  "nautilus-trading",
+ "nautilus-yahoo",
  "pyo3",
  "pyo3-stub-gen",
 ]
@@ -7071,6 +7133,32 @@ dependencies = [
  "serde_json",
  "strum 0.28.0",
  "ustr",
+]
+
+[[package]]
+name = "nautilus-yahoo"
+version = "0.1.0"
+dependencies = [
+ "anyhow",
+ "async-trait",
+ "base64 0.22.1",
+ "chrono",
+ "futures-util",
+ "log",
+ "nautilus-common",
+ "nautilus-core",
+ "nautilus-finstream",
+ "nautilus-model",
+ "nautilus-system",
+ "prost",
+ "pyo3",
+ "pyo3-stub-gen",
+ "serde",
+ "serde_json",
+ "tokio",
+ "tokio-tungstenite",
+ "tokio-util",
+ "tracing",
 ]
 
 [[package]]

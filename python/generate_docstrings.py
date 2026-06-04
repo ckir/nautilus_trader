@@ -127,7 +127,7 @@ def collect_source_docs(src_dir: Path) -> dict[tuple[str | None, str], list[str]
         if rel.parts[0] == "python":
             continue
 
-        lines = rs_file.read_text().splitlines()
+        lines = rs_file.read_text(encoding="utf-8").splitlines()
         doc_block: list[str] = []
         in_multiline_attr = False
         current_impl: str | None = None
@@ -440,7 +440,7 @@ def process_crate(  # noqa: C901
             print(f"  {action} {updates} doc(s) in {rel_path}")
 
             if not dry_run:
-                rs_file.write_text("\n".join(file_lines) + "\n")
+                rs_file.write_text("\n".join(file_lines) + "\n", encoding="utf-8")
 
         total_updates += updates
 

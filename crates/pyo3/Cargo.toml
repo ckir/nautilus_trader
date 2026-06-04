@@ -38,6 +38,7 @@ defi = [
 extension-module = [
   "nautilus-analysis/extension-module",
   "nautilus-architect-ax/extension-module",
+  "nautilus-alpaca/extension-module",
   "nautilus-backtest/extension-module",
   "nautilus-betfair?/extension-module",
   "nautilus-binance/extension-module",
@@ -54,6 +55,7 @@ extension-module = [
   "nautilus-derive/extension-module",
   "nautilus-dydx/extension-module",
   "nautilus-execution/extension-module",
+  "nautilus-finnhub/extension-module",
   "nautilus-hyperliquid/extension-module",
   "nautilus-indicators/extension-module",
   "nautilus-infrastructure/extension-module",
@@ -61,6 +63,7 @@ extension-module = [
   "nautilus-kraken/extension-module",
   "nautilus-lighter/extension-module",
   "nautilus-live/extension-module",
+  "nautilus-massive/extension-module",
   "nautilus-model/extension-module",
   "nautilus-okx/extension-module",
   "nautilus-portfolio/extension-module",
@@ -72,6 +75,7 @@ extension-module = [
   "nautilus-tardis/extension-module",
   "nautilus-testkit/extension-module",
   "nautilus-trading/extension-module",
+  "nautilus-yahoo/extension-module",
   "pyo3/extension-module",
 ]
 ffi = [
@@ -138,6 +142,7 @@ nautilus-trading = { workspace = true, features = ["python"] }
 
 # Adapters
 nautilus-architect-ax = { workspace = true, features = ["python"] }
+nautilus-alpaca = { workspace = true, features = ["python"] }
 nautilus-betfair = { workspace = true, optional = true }
 nautilus-binance = { workspace = true, features = ["python"] }
 nautilus-bitmex = { workspace = true, features = ["python"] }
@@ -150,14 +155,17 @@ nautilus-databento = { workspace = true, features = ["python", "live"] }
 nautilus-deribit = { workspace = true, features = ["python"] }
 nautilus-derive = { workspace = true, features = ["python"] }
 nautilus-dydx = { workspace = true, features = ["python"] }
+nautilus-finnhub = { workspace = true, features = ["python"] }
 nautilus-hyperliquid = { workspace = true, features = ["python"] }
 nautilus-interactive-brokers = { workspace = true, features = ["python"] }
 nautilus-kraken = { workspace = true, features = ["python"] }
 nautilus-lighter = { workspace = true, features = ["python"] }
+nautilus-massive = { workspace = true, features = ["python"] }
 nautilus-okx = { workspace = true, features = ["python"] }
 nautilus-polymarket = { workspace = true, features = ["python"] }
 nautilus-sandbox = { workspace = true, features = ["python"] }
 nautilus-tardis = { workspace = true, features = ["python", "replay"] }
+nautilus-yahoo = { workspace = true, features = ["python"] }
 
 pyo3 = { workspace = true }
 pyo3-stub-gen = { workspace = true }
