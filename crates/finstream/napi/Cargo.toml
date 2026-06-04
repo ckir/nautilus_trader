@@ -1,0 +1,24 @@
+[package]
+name = "nautilus-finstream-napi"
+description = "Node.js NAPI bindings for finstream-core"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+
+[lib]
+crate-type = ["cdylib"]
+
+[features]
+default = ["napi/napi4"]
+
+[dependencies]
+nautilus-finstream = { path = "../core", features = ["alpaca", "finnhub", "yahoo"] }
+tokio.workspace = true
+serde_json.workspace = true
+
+napi = { version = "2.16.14", features = ["async"] }
+napi-derive = "2.16.13"
+
+[lints]
+workspace = true
